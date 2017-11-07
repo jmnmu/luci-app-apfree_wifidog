@@ -34,3 +34,9 @@ make menuconfig
 选择 luci->application->apfree_wifidog
 
 make V=s
+
+
+## 联系我们
+[331230369](https://jq.qq.com/?_wv=1027&k=4ADDSev)
+
+### 如果您觉得我们的开源对您有帮助，请不要犹豫 star
