@@ -22,9 +22,16 @@ if opkg.status(packageName)[packageName] then
 	return Map(packageName, translate("ApFree_WifiDog"), translate('<b style="color:red">Wifidog is not installed..</b>'))
 end
 
-m = Map("wifidog", translate("ApFree_WifiDog"), translate("<a target=\"_blank\" href=\"https://github.com/liudf0716/apfree_wifidog\">ApFree WiFiDog</a>" .. 
-															"在完全兼容原版WiFiDog的基础上，在功能、性能和稳定性方面做了大量工作、改进及优化，" ..
-															"目前在坤腾固件中广泛使用，使用ApFree WiFidog的在线路由器数量达到1万多台且还在继续增长..." ))
+local descr = [[
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<p>
+	<a target="_blank" class="github-button" href="https://github.com/liudf0716/apfree_wifidog/subscription" data-icon="octicon-eye" data-style="mega" data-count-href="/liudf0716/apfree_wifidog/watchers" data-count-api="/repos/liudf0716/apfree_wifidog#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch liudf0716/apfree_wifidog on GitHub">Watch</a>
+	<a target="_blank" class="github-button" href="https://github.com/liudf0716/apfree_wifidog" data-icon="octicon-star" data-style="mega" data-count-href="/liudf0716/apfree_wifidog/stargazers" data-count-api="/repos/liudf0716/apfree_wifidog#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star liudf0716/apfree_wifidog on GitHub">Star</a>
+	<a target="_blank" class="github-button" href="https://github.com/liudf0716/apfree_wifidog/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/liudf0716/apfree_wifidog/network" data-count-api="/repos/liudf0716/apfree_wifidog#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork liudf0716/apfree_wifidog on GitHub">Fork</a>
+</p>
+]]
+
+m = Map("wifidog", translate("<img src=\"/luci-static/resources/icons/apfreeWifiDog.png\" alt=\"\" />ApFree WifiDog"), translate(descr))
 
 s = m:section(TypedSection, "wifidog", translate("运行状态"), get_status())
 s.anonymous = true
