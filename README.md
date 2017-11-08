@@ -12,7 +12,7 @@ git checkout -b v17.01.4 v17.01.4
 #返回上级目录
 cd ..
 #下载apfree_wifidog源码
-git clone https://github.com/liudf0716/package_apfree_wifidog.git 
+git clone https://github.com/KunTengRom/package_apfree_wifidog.git 
 #将apfree的packag复制到lede目录下
 cp -r package_apfree_wifidog/apfree_wifidog lede/package/
 #替换LEDE编译环境的libevent2
